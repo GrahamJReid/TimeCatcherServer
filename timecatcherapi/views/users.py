@@ -35,7 +35,11 @@ class UserView(ViewSet):
         user.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-      
+    def destroy(self, request, pk):
+        order = User.objects.get(pk=pk)
+        order.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)      
+    
 class UserSerializer(serializers.ModelSerializer):
     """JSON serializer for categories
     """
