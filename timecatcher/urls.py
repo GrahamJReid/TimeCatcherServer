@@ -19,10 +19,11 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 
-from timecatcherapi.views import register_user, check_user,UserView
+from timecatcherapi.views import register_user, check_user,UserView, TimelineView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'user')
+router.register(r'timelines', TimelineView, 'timeline')
 
 
 urlpatterns = [
