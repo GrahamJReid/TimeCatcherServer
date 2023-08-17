@@ -33,5 +33,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register', register_user),
     path('checkuser', check_user),
-    path('timeline-events/<int:pk>/events-by-timeline/', events_by_timeline, name='events-by-timeline'),
+    path('timeline-events/<int:pk>/events-by-timeline', events_by_timeline, name='events-by-timeline'),
 ]
