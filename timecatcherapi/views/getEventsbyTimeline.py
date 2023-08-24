@@ -10,7 +10,7 @@ def events_by_timeline(request, pk):
         """JSON serializer for events"""
         class Meta:
             model = Event
-            fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color')
+            fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color','BCE')
             depth = 1
     
     try:
