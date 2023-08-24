@@ -9,3 +9,4 @@ class Event(models.Model):
     image_url = models.CharField(max_length=1000)
     date = models.DateField()
     color= models.CharField(max_length=50)
+    BCE = models.BooleanField(default=False)
