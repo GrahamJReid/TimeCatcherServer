@@ -3,10 +3,12 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from timecatcherapi.models import Event, User
+from rest_framework import filters
 
 class EventView(ViewSet):
     """Event view"""
-    
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title', 'description', 'date','BCE']
     def list(self, request):
         """Handle GET requests to get all events
         Returns:
