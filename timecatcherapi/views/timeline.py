@@ -3,9 +3,13 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from timecatcherapi.models import Timeline, User
+from rest_framework import filters
 
 class TimelineView(ViewSet):
     """Timeline view"""
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['title',]
+    
     
     def list(self, request):
         """Handle GET requests to get all timelines
