@@ -8,7 +8,7 @@ class EventSerializer(serializers.ModelSerializer):
     """JSON serializer for events"""
     class Meta:
         model = Event
-        fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color', 'BCE')
+        fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color', 'BCE','isPrivate')
         
 
 class TimelineEventSerializer(serializers.ModelSerializer):
