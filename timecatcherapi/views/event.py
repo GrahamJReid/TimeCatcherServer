@@ -35,7 +35,8 @@ class EventView(ViewSet):
             image_url=request.data["imageUrl"],
             date=request.data["date"],
             color=request.data["color"],
-            BCE=request.data["BCE"]
+            BCE=request.data["BCE"],
+            isPrivate = request.data["isPrivate"]
         )
         serializer = EventSerializer(event)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -49,6 +50,7 @@ class EventView(ViewSet):
         event.date = request.data["date"]
         event.color = request.data["color"]
         event.BCE = request.data["BCE"]
+        event.isPrivate = request.data["isPrivate"]
         event.user_id = user_id
         
         event.save()
@@ -64,5 +66,5 @@ class EventSerializer(serializers.ModelSerializer):
     """JSON serializer for events"""
     class Meta:
         model = Event
-        fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color','BCE')
+        fields = ('id', 'user_id', 'title', 'description', 'image_url', 'date', 'color','BCE','isPrivate')
         depth = 1
