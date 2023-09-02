@@ -5,3 +5,4 @@ from .event import EventView
 from .timelineEvent import TimelineEventView
 from .getEventsbyTimeline import events_by_timeline
 from .addTimeline import create_timeline_and_events
+from .collaborativeTimeline import CollaborativeTimelineView
