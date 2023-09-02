@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 
-from timecatcherapi.views import register_user, check_user,UserView, TimelineView, EventView, TimelineEventView, events_by_timeline, create_timeline_and_events,CollaborativeTimelineView
+from timecatcherapi.views import register_user, check_user,UserView, TimelineView, EventView, TimelineEventView, events_by_timeline, create_timeline_and_events,CollaborativeTimelineView, CollaborativeTimelineEventView, events_by_collaborative_timeline
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'user')
@@ -27,6 +27,7 @@ router.register(r'timelines', TimelineView, 'timeline')
 router.register(r'events', EventView, 'event')
 router.register(r'timelineEvents', TimelineEventView, 'timelineEvent')
 router.register(r'CollaborativeTimelines', CollaborativeTimelineView, 'collaborativetimeline')
+router.register(r'CollaborativeTimelineEvents', CollaborativeTimelineEventView, 'collaborativetimelineevent')
 
 
 urlpatterns = [
@@ -36,4 +37,5 @@ urlpatterns = [
     path('checkuser', check_user),
     path('api/create_timeline_and_events', create_timeline_and_events, name='create_timeline_and_events'),
     path('timeline-events/<int:pk>/events-by-timeline', events_by_timeline, name='events-by-timeline'),
+    path('collaborative-timeline-events/<int:pk>/events-by-collaborative-timeline', events_by_collaborative_timeline, name='events-by-collaborative-timeline'),
 ]
