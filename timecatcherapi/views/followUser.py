@@ -8,7 +8,15 @@ from rest_framework import filters
 class FollowUserView(ViewSet):
     """Timeline view"""
     
-      
+    def list(self, request):
+        """Handle GET requests to get all events
+        Returns:
+            Response -- JSON serialized list of events
+        """
+        followuser = FollowUser.objects.all()
+        serializer = FollowUserSerializer(followuser, many=True)
+        return Response(serializer.data)  
+    
     def retrieve(self, request, pk):
         try:
             followuser = FollowUser.objects.get(pk=pk)
