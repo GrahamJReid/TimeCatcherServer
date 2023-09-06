@@ -8,3 +8,4 @@ from .getEventsbyCollaborativeTimeline import events_by_collaborative_timeline
 from .addTimeline import create_timeline_and_events
 from .collaborativeTimeline import CollaborativeTimelineView
 from .collaborativeTimelineEvent import CollaborativeTimelineEventView
+from .followUser import FollowUserView
