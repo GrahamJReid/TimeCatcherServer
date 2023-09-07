@@ -9,3 +9,6 @@ from .addTimeline import create_timeline_and_events
 from .collaborativeTimeline import CollaborativeTimelineView
 from .collaborativeTimelineEvent import CollaborativeTimelineEventView
 from .followUser import FollowUserView
+from .thread import ThreadView
+from .followThread import FollowThreadView
+from .threadComment import ThreadCommentView
