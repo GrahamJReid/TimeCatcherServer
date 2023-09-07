@@ -7,3 +7,4 @@ from .collaborativeTimelineEvent import CollaborativeTimelineEvent
 from .followUser import FollowUser
 from .thread import Thread
 from .followThread import FollowThread
+from .threadComment import ThreadComment
