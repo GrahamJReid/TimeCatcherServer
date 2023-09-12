@@ -8,7 +8,7 @@ from rest_framework import filters
 class EventView(ViewSet):
     """Event view"""
     filter_backends = [filters.SearchFilter]
-    search_fields = ['title', 'description', 'date','BCE']
+    search_fields = ['title','date','BCE']
     def list(self, request):
         """Handle GET requests to get all events
         Returns:
