@@ -35,7 +35,8 @@ class ThreadView(ViewSet):
             user=user_id,
             event=event_id,
             title=request.data["title"],
-            date=request.data["date"]
+            date=request.data["date"],
+            description=request.data["description"]
         )
         serializer = ThreadSerializer(thread)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -47,6 +48,7 @@ class ThreadView(ViewSet):
         thread = Thread.objects.get(pk=pk)
         thread.title = request.data["title"]
         thread.date = request.data["date"]
+        thread.description = request.data["description"]
         thread.user=user_id
         thread.event=event_id
         
@@ -63,5 +65,5 @@ class ThreadSerializer(serializers.ModelSerializer):
     """JSON serializer for timelines"""
     class Meta:
         model = Thread
-        fields = ('id', 'user', 'title', 'event', 'date')
+        fields = ('id', 'user', 'title', 'event', 'date','description')
         depth =1
