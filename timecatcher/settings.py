@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-pp(ssj**stt_!y409#h614_uyk^u8v#lsu_-lg)94386*c$*g*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'time-catcher-6347186471f8.herokuapp.com'
+]
 
 
 # Application definition
