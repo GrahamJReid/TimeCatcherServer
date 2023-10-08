@@ -26,7 +26,6 @@ SECRET_KEY = 'django-insecure-pp(ssj**stt_!y409#h614_uyk^u8v#lsu_-lg)94386*c$*g*
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'time-catcher-6347186471f8.herokuapp.com'
 ]
 
 
@@ -47,7 +46,7 @@ INSTALLED_APPS = [
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'https://time-catcher-6347186471f8.herokuapp.com'
+    
 )
 
 
