@@ -47,6 +47,10 @@ CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:3000',
     'https://time-catcher-6347186471f8.herokuapp.com'
 )
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Add your frontend URL here
+    # Add other allowed origins if needed
+]
 
 
 MIDDLEWARE = [
