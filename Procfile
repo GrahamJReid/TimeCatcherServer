@@ -1,1 +1,1 @@
-web: gunicorn soapdish.wsgi --log-file -
+web: gunicorn timecatcher.wsgi --log-file -
